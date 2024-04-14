@@ -6,6 +6,7 @@ const TestProps = props => {
 
     return (
         <>
+            <p> Task: Test Prop clear in child and parent</p>
             <p>
                 Hello, {props.title} {props.wish}
             </p>

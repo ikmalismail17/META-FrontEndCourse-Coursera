@@ -1,9 +1,12 @@
 import React from 'react';
 import logo from './assets/logo.svg';
 import './assets/styles/App.css';
-import TestProps from './TestProps';
-import PropChildDiv from './PropChildDiv';
-import GuessingGame from './GuessingGame';
+import TestProps from './components/TestProps';
+import PropChildDiv from './components/PropChildDiv';
+import GuessingGame from './components/GuessingGame';
+import TryUseReducer from './components/TryUseReducer';
+import MealsProvider from './hooks/TryCreateContext';
+import TryUseContext from './components/TryUseContext';
 
 const myObject = {
   name: 'John',
@@ -42,6 +45,7 @@ function AppContent(){
   const [title, setTitle] = React.useState('');
   const [wish, setWish] = React.useState();
 
+  // Change the text
   const changeText = () => {
     setText(!text);
     switch(text){
@@ -57,6 +61,7 @@ function AppContent(){
     setWish('Happy Eid Mubarak!');
   }
 
+  // Reset the text
   const resetText = () => {
     setTitle('');
     setWish('');
@@ -66,19 +71,35 @@ function AppContent(){
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo"/>
+        {/* Change the text based on 'Click Here Button'*/}
         <div id='changetext'>
           <Edit />
         </div>
         <div id='changetext1'>
           <Edit1 />
         </div>
+
+        {/* Using Children Props */}
         <PropChildDiv>
+          {/* Passing props to the child component */}
           <TestProps title={title} wish={wish} handleResetText={resetText} passObj={myObject}/>
           <button onClick={resetText} style={{ color: "blue" }}>Reset From Parent</button>
           <button onClick={changeText} style={{ color: "red" }}>Click Here</button>
         </PropChildDiv>
         <PropChildDiv>
+          {/* Guessing game */}
           <GuessingGame />
+        </PropChildDiv>
+        <PropChildDiv>
+          {/* useReducer */}
+          <TryUseReducer />
+        </PropChildDiv>
+        <PropChildDiv>
+          {/* createContext MealsProvider */}
+          <MealsProvider>
+            {/* useContext TryUseContext */}
+            <TryUseContext />
+          </MealsProvider>
         </PropChildDiv>
       </header>
     </div>
