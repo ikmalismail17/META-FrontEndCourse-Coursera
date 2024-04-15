@@ -7,6 +7,9 @@ import GuessingGame from './components/GuessingGame';
 import TryUseReducer from './components/TryUseReducer';
 import MealsProvider from './hooks/TryCreateContext';
 import TryUseContext from './components/TryUseContext';
+import { Routes, Route, Link } from 'react-router-dom';
+import mdylama from './assets/images/Daerah-Yan-1339x500.png';
+import mdybaru from './assets/images/YAN KEDAH 1.png';
 
 const myObject = {
   name: 'John',
@@ -41,6 +44,25 @@ function Edit1(){
 }
 
 function AppContent(){
+  
+  return (
+    <div className="App">
+      <header className="App-header">
+        <nav className='nav'>
+          <Link to="/" className='nav-item' style={{ paddingRight: '10px', textDecoration: 'none' }}>Home</Link>
+          <Link to="/image" className='nav-item' style={{ textDecoration: 'none' }}>Image</Link>
+        </nav>
+        <img src={logo} className="App-logo" alt="logo"/>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/image" element={<Image />} />
+        </Routes>
+      </header>
+    </div>
+  );
+}
+
+const Home = () => {
   const [text, setText] = React.useState(false);
   const [title, setTitle] = React.useState('');
   const [wish, setWish] = React.useState();
@@ -66,13 +88,11 @@ function AppContent(){
     setTitle('');
     setWish('');
   }
-  
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo"/>
-        {/* Change the text based on 'Click Here Button'*/}
-        <div id='changetext'>
+    <div>
+      {/* Change the text based on 'Click Here Button'*/}
+      <div id='changetext'>
           <Edit />
         </div>
         <div id='changetext1'>
@@ -101,9 +121,29 @@ function AppContent(){
             <TryUseContext />
           </MealsProvider>
         </PropChildDiv>
-      </header>
     </div>
   );
-}
+};
+
+const Image = () => {
+  return (
+    <div>
+      <div style={{ margin: '5px', textAlign:'center' }}>
+        <div>
+         <img src={mdylama} alt="MDY lama" height={300}/>
+         <p>MDY lama</p>
+        </div>
+        <div>
+          <img src={mdybaru} alt="MDY baru" height={300}/>
+          <p>MDY baru</p>
+        </div>
+        <div>
+          <img src={require('./assets/images/YAN KEDAH 2.png')} alt="MDY baru 2" height={300}/>
+          <p>MDY baru 2</p>
+        </div>
+      </div>
+    </div>
+  );
+};
 
 export default App;
