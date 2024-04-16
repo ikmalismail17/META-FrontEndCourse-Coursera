@@ -11,6 +11,7 @@ import { Routes, Route, Link } from 'react-router-dom';
 import mdylama from './assets/images/Daerah-Yan-1339x500.png';
 import mdybaru from './assets/images/YAN KEDAH 1.png';
 import ReactVideoPlayer from './components/ReactVideoPlayer';
+import SimpleCalculator from './components/SimpleCalculator';
 
 const myObject = {
   name: 'John',
@@ -53,12 +54,14 @@ function AppContent(){
           <Link to="/" className='nav-item' style={{ paddingRight: '10px', textDecoration: 'none' }}>Home</Link>
           <Link to="/image" className='nav-item' style={{ paddingRight: '10px', textDecoration: 'none' }}>Image</Link>
           <Link to="/video" className='nav-item' style={{ paddingRight: '10px', textDecoration: 'none' }}>Video/Audio</Link>
+          <Link to="/calculator" className='nav-item' style={{ paddingRight: '10px', textDecoration: 'none' }}>Calculator</Link>
         </nav>
         <img src={logo} className="App-logo" alt="logo"/>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/image" element={<Image />} />
           <Route path="/video" element={<ReactVideoPlayer />} />
+          <Route path="/calculator" element={<SimpleCalculator />} />
         </Routes>
       </header>
     </div>

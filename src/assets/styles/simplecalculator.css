@@ -1,0 +1,28 @@
+*{ 
+    font-family: sans-serif;
+}
+
+input, button {
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+input {
+    display: block;
+    margin-bottom: 20px;
+}
+
+button.calcbtn {
+    border: 1px solid gray;
+    background: whitesmoke;
+    margin-right: 5px;
+}
+button.calcbtn:nth-last-child(2), button.calcbtn:nth-last-child(1) {
+    background: tomato;
+    color: white;
+}
+
+button.calcbtn:hover {
+    background: lightgray;
+}
