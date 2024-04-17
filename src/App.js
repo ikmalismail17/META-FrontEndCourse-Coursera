@@ -14,6 +14,7 @@ import ReactVideoPlayer from './components/ReactVideoPlayer';
 import SimpleCalculator from './components/SimpleCalculator';
 import DessertsList from './components/DessertList';
 import ControlledForm from './components/ControlledForm';
+import TryThemeContext from './components/TryThemeContext';
 
 // create basic list
 const desserts = [
@@ -83,6 +84,7 @@ function AppContent(){
           <Link to="/video" className='nav-item' style={{ paddingRight: '10px', textDecoration: 'none' }}>Video/Audio</Link>
           <Link to="/calculator" className='nav-item' style={{ paddingRight: '10px', textDecoration: 'none' }}>Calculator</Link>
           <Link to="/form" className='nav-item' style={{ paddingRight: '10px', textDecoration: 'none' }}>Form</Link>
+          <Link to="/theme" className='nav-item' style={{ paddingRight: '10px', textDecoration: 'none' }}>Theme</Link>
         </nav>
         <img src={logo} className="App-logo" alt="logo"/>
         <Routes>
@@ -91,6 +93,7 @@ function AppContent(){
           <Route path="/video" element={<ReactVideoPlayer />} />
           <Route path="/calculator" element={<SimpleCalculator />} />
           <Route path="/form" element={<ControlledForm />} />
+          <Route path="/theme" element={<TryThemeContext />} />
         </Routes>
       </header>
     </div>
