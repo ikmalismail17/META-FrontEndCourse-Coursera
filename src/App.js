@@ -13,6 +13,7 @@ import mdybaru from './assets/images/YAN KEDAH 1.png';
 import ReactVideoPlayer from './components/ReactVideoPlayer';
 import SimpleCalculator from './components/SimpleCalculator';
 import DessertsList from './components/DessertList';
+import ControlledForm from './components/ControlledForm';
 
 // create basic list
 const desserts = [
@@ -81,6 +82,7 @@ function AppContent(){
           <Link to="/image" className='nav-item' style={{ paddingRight: '10px', textDecoration: 'none' }}>Image</Link>
           <Link to="/video" className='nav-item' style={{ paddingRight: '10px', textDecoration: 'none' }}>Video/Audio</Link>
           <Link to="/calculator" className='nav-item' style={{ paddingRight: '10px', textDecoration: 'none' }}>Calculator</Link>
+          <Link to="/form" className='nav-item' style={{ paddingRight: '10px', textDecoration: 'none' }}>Form</Link>
         </nav>
         <img src={logo} className="App-logo" alt="logo"/>
         <Routes>
@@ -88,6 +90,7 @@ function AppContent(){
           <Route path="/image" element={<Image />} />
           <Route path="/video" element={<ReactVideoPlayer />} />
           <Route path="/calculator" element={<SimpleCalculator />} />
+          <Route path="/form" element={<ControlledForm />} />
         </Routes>
       </header>
     </div>
