@@ -12,12 +12,38 @@ import mdylama from './assets/images/Daerah-Yan-1339x500.png';
 import mdybaru from './assets/images/YAN KEDAH 1.png';
 import ReactVideoPlayer from './components/ReactVideoPlayer';
 import SimpleCalculator from './components/SimpleCalculator';
+import DessertsList from './components/DessertList';
+
+// create basic list
+const desserts = [
+  {
+    name: "Chocolate Cake",
+    calories: 400,
+    createdAt: "2022-09-01",
+  },
+  {
+    name: "Ice Cream",
+    calories: 200,
+    createdAt: "2022-01-02",
+  },
+  {
+    name: "Tiramisu",
+    calories: 300,
+    createdAt: "2021-10-03",
+  },
+  {
+    name: "Cheesecake",
+    calories: 600,
+    createdAt: "2022-01-04",
+  },
+];
 
 const myObject = {
   name: 'John',
   age: 25,
   city: 'New York'
 };
+
 
 function App() {
   return (
@@ -126,6 +152,10 @@ const Home = () => {
             {/* useContext TryUseContext */}
             <TryUseContext />
           </MealsProvider>
+        </PropChildDiv>
+        <PropChildDiv>
+          {/* Basic List Items */}
+          <DessertsList data={desserts} />
         </PropChildDiv>
     </div>
   );
