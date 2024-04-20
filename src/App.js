@@ -104,6 +104,7 @@ const Home = () => {
   const [text, setText] = React.useState(false);
   const [title, setTitle] = React.useState('');
   const [wish, setWish] = React.useState();
+  const [toggle, setToggle] = React.useState(false);
 
   // Change the text
   const changeText = () => {
@@ -126,6 +127,15 @@ const Home = () => {
     setTitle('');
     setWish('');
   }
+
+  //toggle web title using useEffect
+  const toggleWebTitle = () => {
+      setToggle(!toggle);
+   };
+
+  React.useEffect(()=> {
+    document.title = toggle ? 'Try Use Effect' : 'React App ';
+  }, [toggle])
 
   return (
     <div>
@@ -162,6 +172,11 @@ const Home = () => {
         <PropChildDiv>
           {/* Basic List Items */}
           <DessertsList data={desserts} />
+        </PropChildDiv>
+        <PropChildDiv>
+          {/* useEffect */}
+          <p>Using useEffect on web title</p>
+          <button onClick={toggleWebTitle}>Try Use Effect</button>
         </PropChildDiv>
     </div>
   );
