@@ -15,6 +15,7 @@ import SimpleCalculator from './components/SimpleCalculator';
 import DessertsList from './components/DessertList';
 import ControlledForm from './components/ControlledForm';
 import TryThemeContext from './components/TryThemeContext';
+import FetchRandomData from './components/FetchRandomData';
 
 // create basic list
 const desserts = [
@@ -185,6 +186,10 @@ const Home = () => {
 const Image = () => {
   return (
     <div>
+      <PropChildDiv>
+        <p>Random fetch data using fetch API and useEffect</p>
+        <FetchRandomData />
+      </PropChildDiv>
       <div style={{ margin: '5px', textAlign:'center' }}>
         <div>
          <img src={mdylama} alt="MDY lama" height={300}/>

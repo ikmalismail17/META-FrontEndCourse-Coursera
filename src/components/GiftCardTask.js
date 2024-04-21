@@ -27,6 +27,7 @@ export default function GiftCardTask() {
 
   return (
     <div style={{padding: '40px'}}>
+      <p>update state using spread operator</p>
       <h1>
         Gift Card Page
       </h1>
