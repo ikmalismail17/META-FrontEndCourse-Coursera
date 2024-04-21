@@ -91,7 +91,7 @@ const TryThemeContext = () => {
             <Page />
             </div>
             <PropChildDiv>
-            <p>Custom Hook</p>
+            <p>Custom Hook using useEffect</p>
             <h1>
                 Today is: {day}<br />
                 {
