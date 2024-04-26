@@ -5,6 +5,7 @@ import {
 } from "react";
 import '../assets/styles/simplecalculator.css';
 import PropChildDiv from "./PropChildDiv";
+import HOCMousePosition from "./HOCMousePosition";
 
 const SimpleCalculator = () => { 
   const inputRef = useRef(null); 
@@ -67,6 +68,9 @@ const SimpleCalculator = () => {
         <button className="calcbtn" onClick={resetInput}>Reset Input</button> 
         <button className="calcbtn" onClick={resetResult}>Reset Result</button>
       </form> 
+      </PropChildDiv>
+      <PropChildDiv>
+        <HOCMousePosition/>
       </PropChildDiv>
     </div>
   ); 

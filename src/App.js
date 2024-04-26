@@ -16,6 +16,7 @@ import DessertsList from './components/DessertList';
 import ControlledForm from './components/ControlledForm';
 import TryThemeContext from './components/TryThemeContext';
 import FetchRandomData from './components/FetchRandomData';
+import GiftCardTask from './components/GiftCardTask';
 
 // create basic list
 const desserts = [
@@ -178,6 +179,10 @@ const Home = () => {
           {/* useEffect */}
           <p>Using useEffect on web title</p>
           <button onClick={toggleWebTitle}>Try Use Effect</button>
+        </PropChildDiv>
+        <PropChildDiv>
+          {/* Gift Card Task */}
+          <GiftCardTask  />
         </PropChildDiv>
     </div>
   );

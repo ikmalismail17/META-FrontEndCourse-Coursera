@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import PropChildDiv from './PropChildDiv';
-import GiftCardTask from './GiftCardTask';
+import RadioGroup from './RadioMain';
 
 
 //component for password error message
@@ -125,8 +125,7 @@ const ControlledForm = () => {
                 </form> 
             </PropChildDiv>
             <PropChildDiv>
-                {/* Gift Card Task */}
-                <GiftCardTask  />
+                <RadioGroup />
             </PropChildDiv>
         </>
     )
