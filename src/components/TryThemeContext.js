@@ -3,6 +3,7 @@ import PropChildDiv from "./PropChildDiv";
 import Switch from "./Switch";
 import { useState } from "react";
 import usePrevious from "../hooks/CustomHooks";
+import { Calendar } from "rsuite";
 
 const Title = ({ children }) => {
     const { theme } = useTheme();
@@ -103,6 +104,11 @@ const TryThemeContext = () => {
             <button onClick={getNextDay}>
                 Get next day
             </button>
+            </PropChildDiv>
+            <PropChildDiv>
+                <div className="calendar-container">
+                    <Calendar />
+                </div>
             </PropChildDiv>
         </>
     );
