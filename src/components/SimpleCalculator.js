@@ -6,6 +6,7 @@ import {
 import '../assets/styles/simplecalculator.css';
 import PropChildDiv from "./PropChildDiv";
 import HOCMousePosition from "./HOCMousePosition";
+import MousePositionRenderProps from "./MousePositionRenderProps";
 
 const SimpleCalculator = () => { 
   const inputRef = useRef(null); 
@@ -71,6 +72,9 @@ const SimpleCalculator = () => {
       </PropChildDiv>
       <PropChildDiv>
         <HOCMousePosition/>
+      </PropChildDiv>
+      <PropChildDiv>
+        <MousePositionRenderProps/>
       </PropChildDiv>
     </div>
   ); 
