@@ -33,7 +33,7 @@ const PanelMouseLogger = ({mousePosition}) => {
     }
     return (
         <div>
-            <p>Panel Mouse Position</p>
+            <p>Mouse Position:</p>
             <span>X: {mousePosition.x}</span>
             <span>Y: {mousePosition.y}</span>
         </div>
@@ -58,7 +58,7 @@ const HOCMousePosition = () => {
     
     return (
         <>
-        <p>Mouse Position</p>
+        <p>HOC use</p>
         <PanelMouseLoggerWithMousePosition />
         <PointMouseLoggerWithMousePosition />
         </>
